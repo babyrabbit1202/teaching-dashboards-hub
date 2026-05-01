@@ -160,7 +160,7 @@ body::before {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .stage-head {
@@ -211,21 +211,25 @@ body::before {
 .active-view { display: block; }
 
 .brief-slide {
-  min-height: min(58vh, 560px);
+  height: min(50vh, 500px);
+  min-height: 360px;
   aspect-ratio: 16 / 9;
   width: 100%;
   max-height: 590px;
   display: flex;
   align-items: stretch;
+  flex: 0 1 auto;
 }
 
 .info-slide {
-  min-height: min(58vh, 560px);
+  height: min(50vh, 500px);
+  min-height: 360px;
   aspect-ratio: 16 / 9;
   width: 100%;
   max-height: 590px;
   display: flex;
   align-items: stretch;
+  flex: 0 1 auto;
 }
 
 .brief-ppt {
@@ -528,11 +532,13 @@ body::before {
 
 .brief-controls {
   height: 56px;
+  min-height: 56px;
 }
 
 .brief-controls .icon-button {
   width: 46px;
   min-width: 46px;
+  height: 46px;
   padding: 0;
   display: inline-grid;
   place-items: center;
@@ -692,10 +698,12 @@ body::before {
 
 .media-controls {
   height: 48px;
+  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 .media-controls span {
